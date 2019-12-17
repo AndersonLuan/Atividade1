@@ -1,0 +1,44 @@
+﻿@model Atividade1.Models.Placar
+
+@{
+    ViewData["Title"] = "ViewPlacar";
+}
+
+<h2>ViewPlacar</h2>
+
+<h4>Placar</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="ViewPlacar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                
+                <label asp-for="JogadorPts" class="control-label"></label>
+                <input asp-for="JogadorPts" class="form-control" />
+                <span asp-validation-for="JogadorPts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalPts" class="control-label"></label>
+                <input asp-for="TotalPts" class="form-control" />
+                <span asp-validation-for="TotalPts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiaPts" class="control-label"></label>
+                <input asp-for="DiaPts" class="form-control" />
+                <span asp-validation-for="DiaPts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

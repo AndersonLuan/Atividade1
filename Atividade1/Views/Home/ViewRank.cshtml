@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Atividade1.Models.Rank>
+
+@{
+    ViewData["Title"] = "ViewRank";
+}
+
+<h2>ViewRank</h2>
+
+<h2>Tabela dos 10 melhores jogadores </h2>
+<div ng-controller="RanksController">
+    <div style="font-weight:bold">
+        Produto
+    </div>
+    <table>
+        <tr>
+            <td>Jogador que mais fez pontos:</td>
+            <td>{{Jogador.TotalPts}}</td>
+        </tr>
+       
+       
+    </table>
+</div>
+
